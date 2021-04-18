@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=ZCOOL+KuaiLe&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.navBar {
+  background-color: #0096ff;
+  width: 80vw;
+  max-width: 1300px;
+  height: 10vh;
+  max-height: 5rem;
+  border-radius: 0px 0px 5px 5px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 1em;
+  width: 15%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.logoName {
+  font-family: "ZCOOL KuaiLe", "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.navigation {
+  margin-left: 1rem;
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navigationText {
+  margin-left: 0.5em;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.1em;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+.navigationElement:hover .navigationText,
+.navigationElement:hover .svg {
+  cursor: pointer;
+  color: #003459;
+  fill: #003459;
+}
+
+.separator {
+  margin-left: 1.5em;
+  height: 100%;
+  border: 1px solid #003459;
+}
+
+.navigationElement {
+  margin-left: 1.5em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.positionSearchBar {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.searchBar {
+  margin-right: 30%;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  background-color: #003459;
+  border-radius: 30px;
+  padding: 0.7rem;
+}
+
+.input {
+  border: none;
+  background-color: #003459;
+  outline: none;
+  padding: 0;
+  color: white;
+  transition: 0.4s;
+  width: 0px;
+}
+
+.searchBar:hover {
+  background-color: #003459;
+}
+
+.searchBar:hover > .input,
+.input:focus {
+  background-color: #003459;
+  width: 7rem;
+  margin: 0px 0.5rem;
+}
+
+.searchIcon {
+  color: white;
+  float: right;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
