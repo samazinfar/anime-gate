@@ -19,6 +19,10 @@
   align-items: center;
 }
 
+.noUnderline {
+  text-decoration: none;
+}
+
 .logo {
   margin-left: 2em;
   width: 15%;
@@ -38,6 +42,7 @@
   font-weight: normal;
   font-size: 20px;
   color: #ffffff;
+  text-decoration: none;
 }
 
 .navigation {

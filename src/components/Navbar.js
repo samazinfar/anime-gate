@@ -1,180 +1,61 @@
+// /* eslint-disable */ Disable eslint if needed
+import React from "react";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+
+// Components
+import Home from "./Home";
+import MyList from "./MyList";
+import News from "./News";
+import Discover from "./Discover";
+
+// Icons
 import "./Navbar.css";
+import { ReactComponent as Logo } from "./images/Logo.svg";
+import { ReactComponent as ListIcon } from "./images/list.svg";
+import { ReactComponent as NewsIcon } from "./images/flame-svgrepo-com.svg";
+import { ReactComponent as DiscoverIcon } from "./images/shuriken-svgrepo-com-3.svg";
+import { ReactComponent as AboutIcon } from "./images/person-fill.svg";
+import { ReactComponent as SearchIcon } from "./images/search-svgrepo-com-2.svg";
 
 export default function Navbar() {
   return (
-    <nav className="main">
+    <Router className="main">
       <section className="navBar">
-        <div className="logo">
+        <Link to="/" className="logo noUnderline">
           <div>
-            <svg
-              width="65"
-              height="55"
-              viewBox="0 0 65 55"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10.1875 13.0359L3 7V13.0359L8.17878 21.375H55.9462L61.125 13.0359V7L54.25 13.0359H10.1875Z"
-                fill="white"
-                stroke="white"
-                stroke-width="6"
-              />
-              <path
-                d="M56.9731 19.4554H7.67065L9.57276 27.24H54.9949L56.9731 19.4554Z"
-                fill="white"
-              />
-              <path
-                d="M41.625 26.25H48.75V46.5H41.625V26.25Z"
-                fill="white"
-                stroke="white"
-                stroke-width="6"
-              />
-              <path
-                d="M15.3748 26.25H21.8748V46.5H15.3748V26.25Z"
-                fill="white"
-                stroke="white"
-                stroke-width="6"
-              />
-              <path
-                d="M51.7502 52H39.2502L39.6813 49.1186L41.1021 47L49.4514 47.0847L51.1037 49.1186L51.7502 52Z"
-                fill="white"
-                stroke="white"
-                stroke-width="6"
-              />
-              <path
-                d="M24.8748 52H12.3748L12.8058 49.839L14.2266 48.25L22.5759 48.3136L24.2282 49.839L24.8748 52Z"
-                fill="white"
-                stroke="white"
-                stroke-width="6"
-              />
-              <path
-                d="M9.03167 13.5491L4.03784 8.55695V13.5491L9.03167 20.4461H55.0931L60.0869 13.5491V8.55695L55.0931 13.5491H9.03167Z"
-                fill="#003459"
-                stroke="#003459"
-                stroke-width="3"
-              />
-              <path
-                d="M54.2502 18.25H9.25024L12.0627 24.5H51.4377L54.2502 18.25Z"
-                fill="#0096FF"
-              />
-              <path
-                d="M42.1538 25.0177H48.2969V47.2961H42.1538V25.0177Z"
-                fill="#003459"
-                stroke="#0096FF"
-                stroke-width="1.5"
-              />
-              <path
-                d="M51.1699 51.8676H39.7053L40.1007 49.4207L41.4038 47.6215L49.0615 47.6934L50.5769 49.4207L51.1699 51.8676Z"
-                fill="#0096FF"
-                stroke="#0096FF"
-                stroke-width="2"
-              />
-              <rect
-                x="15.8281"
-                y="25.0177"
-                width="5.71845"
-                height="22.2784"
-                fill="#003459"
-                stroke="#0096FF"
-                stroke-width="1.5"
-              />
-              <path
-                d="M24.4192 51.8676H12.9546L13.3499 49.4206L15.0777 47.6215L22.3107 47.6934L23.8262 49.4206L24.4192 51.8676Z"
-                fill="#0096FF"
-                stroke="#0096FF"
-                stroke-width="2"
-              />
-            </svg>
+            <Logo />
           </div>
           <p className="logoName">
             ANIME <br />
             GATE
           </p>
-        </div>
+        </Link>
         <div className="navigation">
-          <a className="navigationElement">
-            <svg
-              width="19"
-              height="15"
-              viewBox="0 0 19 15"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                className="svg"
-                d="M0.90625 13.75C0.90625 13.5428 0.98856 13.3441 1.13507 13.1976C1.28159 13.0511 1.4803 12.9688 1.6875 12.9688H17.3125C17.5197 12.9688 17.7184 13.0511 17.8649 13.1976C18.0114 13.3441 18.0938 13.5428 18.0938 13.75C18.0938 13.9572 18.0114 14.1559 17.8649 14.3024C17.7184 14.4489 17.5197 14.5312 17.3125 14.5312H1.6875C1.4803 14.5312 1.28159 14.4489 1.13507 14.3024C0.98856 14.1559 0.90625 13.9572 0.90625 13.75ZM0.90625 7.5C0.90625 7.2928 0.98856 7.09409 1.13507 6.94757C1.28159 6.80106 1.4803 6.71875 1.6875 6.71875H17.3125C17.5197 6.71875 17.7184 6.80106 17.8649 6.94757C18.0114 7.09409 18.0938 7.2928 18.0938 7.5C18.0938 7.7072 18.0114 7.90591 17.8649 8.05243C17.7184 8.19894 17.5197 8.28125 17.3125 8.28125H1.6875C1.4803 8.28125 1.28159 8.19894 1.13507 8.05243C0.98856 7.90591 0.90625 7.7072 0.90625 7.5ZM0.90625 1.25C0.90625 1.0428 0.98856 0.844086 1.13507 0.697573C1.28159 0.55106 1.4803 0.46875 1.6875 0.46875H17.3125C17.5197 0.46875 17.7184 0.55106 17.8649 0.697573C18.0114 0.844086 18.0938 1.0428 18.0938 1.25C18.0938 1.4572 18.0114 1.65591 17.8649 1.80243C17.7184 1.94894 17.5197 2.03125 17.3125 2.03125H1.6875C1.4803 2.03125 1.28159 1.94894 1.13507 1.80243C0.98856 1.65591 0.90625 1.4572 0.90625 1.25V1.25Z"
-                fill="white"
-              />
-            </svg>
-
+          <Link to="/my-list" className="navigationElement noUnderline">
+            <ListIcon />
             <p className="navigationText">My List</p>
             <hr className="separator" />
-          </a>
-          <a className="navigationElement">
-            <svg
-              width="15"
-              height="20"
-              viewBox="0 0 15 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                className="svg"
-                d="M3.82431 19.9737C4.05002 20.0776 4.28811 19.8527 4.14992 19.6665C3.39986 18.6561 2.68959 16.9558 3.82121 14.7661C5.70834 11.1146 6.85665 9.22335 6.85665 9.22335C6.85665 9.22335 7.46743 11.4304 9.1231 13.3928C10.7166 15.2815 11.5888 17.6568 10.1827 19.6356C10.0507 19.8213 10.2834 20.0404 10.5077 19.9411C12.2482 19.1704 14.2004 17.6246 14.4207 14.5484C14.5019 13.6084 14.3801 12.2924 13.7711 10.6317C12.988 8.52692 12.0253 7.54479 11.4682 7.12303C11.3016 6.99685 11.0425 7.10868 11.0562 7.29992C11.2185 9.57097 10.2314 10.1473 9.66955 8.84848C9.44516 8.32973 9.3143 7.43247 9.3143 6.33979C9.3143 4.52067 8.70454 2.64806 7.36024 1.12636C7.01065 0.730642 6.6016 0.360871 6.1323 0.0455439C5.9624 -0.0686391 5.71611 0.0461321 5.73167 0.231818C5.83489 1.46502 5.74137 4.9993 2.15904 9.22165C-1.08907 13.1384 0.169566 16.1464 0.616182 16.9611C1.47007 18.5218 2.66112 19.4384 3.82431 19.9737Z"
-                fill="white"
-              />
-            </svg>
+          </Link>
+          <Link to="/news" className="navigationElement noUnderline">
+            <NewsIcon />
             <p className="navigationText">News</p>
             <hr className="separator" />
-          </a>
-          <a className="navigationElement">
-            <svg
-              width="26"
-              height="25"
-              viewBox="0 0 26 25"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                className="svg"
-                d="M21.778 14.9338L18.0368 10.6697L15.5571 11.7619L15.5571 11.7619C15.4877 11.3528 15.3188 10.9622 15.0586 10.6372L17.5435 9.54266L16.9217 3.90786C16.8675 3.41316 16.2807 3.18486 15.9065 3.51352L11.644 7.25089L12.7384 9.73581C12.3256 9.80383 11.9387 9.97415 11.6099 10.2329L10.5154 7.74794L4.88062 8.36988C4.386 8.424 4.15763 9.01078 4.48631 9.38496L8.22367 13.6475L10.7086 12.5531C10.7766 12.9659 10.947 13.3528 11.2057 13.6816L8.72076 14.7761L9.34263 20.4109C9.39676 20.9056 9.98356 21.1339 10.3578 20.8052L14.6203 17.0678L13.5259 14.5829C13.9372 14.5188 14.3256 14.3446 14.6529 14.0896L14.6529 14.0896L15.7451 16.5693L21.3837 15.9489C21.8783 15.8948 22.1067 15.3079 21.778 14.9338ZM12.6874 13.3042C12.0517 13.0572 11.7445 12.3397 11.9873 11.7146C12.2301 11.0897 12.9408 10.7675 13.5768 11.0146C14.2057 11.2588 14.5222 11.9727 14.2769 12.6041C14.0332 13.2315 13.32 13.5499 12.6874 13.3042Z"
-                fill="white"
-              />
-            </svg>
-
+          </Link>
+          <Link to="/discover" className="navigationElement noUnderline">
+            <DiscoverIcon />
             <p className="navigationText">Discover</p>
             <hr className="separator" />
-          </a>
-          <a className="navigationElement">
-            <svg
-              width="15"
-              height="15"
-              viewBox="0 0 15 15"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                className="svg"
-                d="M1.25 15C1.25 15 0 15 0 13.75C0 12.5 1.25 8.75 7.5 8.75C13.75 8.75 15 12.5 15 13.75C15 15 13.75 15 13.75 15H1.25ZM7.5 7.5C8.49456 7.5 9.44839 7.10491 10.1517 6.40165C10.8549 5.69839 11.25 4.74456 11.25 3.75C11.25 2.75544 10.8549 1.80161 10.1517 1.09835C9.44839 0.395088 8.49456 0 7.5 0C6.50544 0 5.55161 0.395088 4.84835 1.09835C4.14509 1.80161 3.75 2.75544 3.75 3.75C3.75 4.74456 4.14509 5.69839 4.84835 6.40165C5.55161 7.10491 6.50544 7.5 7.5 7.5V7.5Z"
-                fill="white"
-              />
-            </svg>
-
+          </Link>
+          <Link to="/about" className="navigationElement noUnderline">
+            <AboutIcon />
             <p className="navigationText">About</p>
-          </a>
+          </Link>
         </div>
         <div className="positionSearchBar">
           <div className="searchBar">
             <input className="input" placeholder="Search an anime" />
             <button className="searchButton">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5.95608 0.985135C4.25698 1.96603 3.04148 3.5501 2.53373 5.44518C2.02587 7.34025 2.2866 9.31977 3.26749 11.0189C4.57582 13.2848 7.01532 14.6925 9.63426 14.6925C10.4612 14.6925 11.2817 14.5501 12.0595 14.277L15.3637 20L17.7196 18.6398L14.416 12.9178C15.5319 11.963 16.3353 10.6967 16.7237 9.2473C17.2314 7.35222 16.9707 5.37281 15.9898 3.67361C14.6816 1.40768 12.242 0 9.62316 0C8.3404 0 7.07234 0.340602 5.95608 0.985135ZM13.6339 5.03384C14.2515 6.10364 14.4156 7.35005 14.0959 8.54324C13.7762 9.73644 13.0109 10.7338 11.9411 11.3514C11.2379 11.7574 10.4402 11.972 9.63426 11.972C7.98424 11.972 6.44739 11.0856 5.62353 9.65864C5.00587 8.58884 4.84177 7.34254 5.16159 6.14923C5.4813 4.95604 6.24662 3.95871 7.31642 3.34095C8.0195 2.93506 8.81724 2.72047 9.62316 2.72047C11.2733 2.72047 12.81 3.6069 13.6339 5.03384Z"
-                  fill="white"
-                />
-              </svg>
+              <SearchIcon />
             </button>
           </div>
         </div>
@@ -183,6 +64,13 @@ export default function Navbar() {
         <input className="responsiveInput" placeholder="Search an anime" />
         <button className="responsiveInputButton">Go</button>
       </section>
-    </nav>
+
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/my-list" component={MyList} />
+        <Route exact path="/news" component={News} />
+        <Route exact path="/discover" component={Discover} />
+      </Switch>
+    </Router>
   );
 }
