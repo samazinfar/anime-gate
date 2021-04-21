@@ -1,6 +1,6 @@
 // /* eslint-disable */ Disable eslint if needed
 import React from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { Route, Switch, Link } from "react-router-dom";
 
 // Components
 import Home from "./Home";
@@ -19,7 +19,7 @@ import { ReactComponent as SearchIcon } from "./images/search-svgrepo-com-2.svg"
 
 export default function Navbar() {
   return (
-    <Router className="main">
+    <section className="main">
       <section className="navBar">
         <Link to="/" className="logo noUnderline">
           <div>
@@ -64,13 +64,12 @@ export default function Navbar() {
         <input className="responsiveInput" placeholder="Search an anime" />
         <button className="responsiveInputButton">Go</button>
       </section>
-
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/my-list" component={MyList} />
         <Route exact path="/news" component={News} />
         <Route exact path="/discover" component={Discover} />
       </Switch>
-    </Router>
+    </section>
   );
 }

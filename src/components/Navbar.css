@@ -154,7 +154,7 @@
   }
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 650px) {
   .separator {
     display: none;
   }
@@ -199,7 +199,7 @@
   }
 }
 
-@media screen and (min-width: 670px) {
+@media screen and (min-width: 650px) {
   .wrapperInputResponsive {
     display: none;
   }
