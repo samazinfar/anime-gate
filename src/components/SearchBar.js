@@ -4,7 +4,7 @@ import "./SearchBar.css";
 export default function SearchBar() {
   const [inputValue, setInputValue] = useState("");
   const [animes, setAnimes] = useState([]);
-  const [input, setInput] = useState();
+  const [input, setInput] = useState([]);
 
   useEffect(() => {
     fetch("https://api.jikan.moe/v3/search/title?q=Fate/Zero&page=1") // inputValue
@@ -15,10 +15,13 @@ export default function SearchBar() {
   }, [inputValue]);
 
   const handelKeyDown = (e) => {
-    if (event.key === 'Enter') {
-          
+    if (event.key === "Enter") {
+      const newAnime = {
+        label: animes,
+      };
+      setInput([...input, newAnime]);
     }
-  }
+  };
 
   return (
     <div className="body">
@@ -30,7 +33,7 @@ export default function SearchBar() {
           name="rechercher"
           placeholder="Type to search..."
           onChange={(e) => setInputValue(e.target.value)}
-          onKeyDown = {handelKeyDownv}
+          onKeyDown={handelKeyDownv}
         />
         <button className="search-btn">search</button>
       </div>
