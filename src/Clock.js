@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 
-export const DateTime = () => {
+export const Clock = () => {
   const [date, setDate] = useState(new Date());
 
   const dateWithMoreHours = (hours) => {
     const updateDate = new Date();
-    updateDate.setHours(updateDate.getHours() + hours);
+    updateDate.setHours(updateDate.getHours() % 12 || 12 + hours);
     return updateDate;
   };
 
   useEffect(() => {
-    const timer = setInterval(() => setDate(dateWithMoreHours(7)), 1000);
+    const timer = setInterval(() => setDate(dateWithMoreHours()), 1000);
     return function cleanup() {
       clearInterval(timer);
     };
@@ -18,10 +18,15 @@ export const DateTime = () => {
 
   return (
     <div>
-      <p> Time : {date.toLocaleTimeString()}</p>
-      <p> Date : {date.toLocaleDateString()}</p>
+      <p>
+        {" "}
+        Time :{" "}
+        {date.toLocaleTimeString("en-US", {
+          timeZone: "Asia/Tokyo",
+        })}{" "}
+      </p>
     </div>
   );
 };
 
-export default DateTime;
+export default Clock;
