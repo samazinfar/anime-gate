@@ -3,23 +3,21 @@ import "./SearchBar.css";
 
 export default function SearchBar() {
   const [inputValue, setInputValue] = useState("");
-  const [animes, setAnimes] = useState([]);
-  const [input, setInput] = useState([]);
+  const [apiResponse, setApiResponse] = useState([]);
+  const [input, setInput] = useState("");
 
   useEffect(() => {
-    fetch("https://api.jikan.moe/v3/search/title?q=Fate/Zero&page=1") // inputValue
+    fetch(`https://api.jikan.moe/v3/search/anime?q=${input}`) // inputValue
       .then((response) => response.json())
       .then((data) => {
-        setAnimes(data.results);
+        setApiResponse(data.results);
       });
-  }, [inputValue]);
-
+  }, [input]);
+  console.log(apiResponse);
   const handelKeyDown = (e) => {
-    if (event.key === "Enter") {
-      const newAnime = {
-        label: animes,
-      };
-      setInput([...input, newAnime]);
+    if (e.key === "Enter") {
+      setInput(inputValue);
+      setInputValue("");
     }
   };
 
@@ -33,14 +31,19 @@ export default function SearchBar() {
           name="rechercher"
           placeholder="Type to search..."
           onChange={(e) => setInputValue(e.target.value)}
-          onKeyDown={handelKeyDownv}
+          onKeyDown={handelKeyDown}
         />
         <button className="search-btn">search</button>
       </div>
       <div>
-        {animes === undefined
+        {apiResponse === undefined
           ? null
-          : animes.map((anime) => <p>{anime.title}</p>)}
+          : apiResponse.map((anime) => (
+              <div>
+                <img src={anime.image_url} />
+                <p>{anime.title}</p>
+              </div>
+            ))}
       </div>
     </div>
   );
