@@ -4,19 +4,18 @@ import "./SearchBar.css";
 export default function SearchBar() {
   const [inputValue, setInputValue] = useState("");
   const [apiResponse, setApiResponse] = useState([]);
-  const [input, setInput] = useState("");
+  const [callApi, setCallApi] = useState("");
 
   useEffect(() => {
-    fetch(`https://api.jikan.moe/v3/search/anime?q=${input}`) // inputValue
+    fetch(`https://api.jikan.moe/v3/search/anime?q=${callApi}`)
       .then((response) => response.json())
       .then((data) => {
         setApiResponse(data.results);
       });
-  }, [input]);
-  console.log(apiResponse);
+  }, [callApi]);
   const handelKeyDown = (e) => {
     if (e.key === "Enter") {
-      setInput(inputValue);
+      setCallApi(inputValue);
       setInputValue("");
     }
   };
