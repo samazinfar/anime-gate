@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Clock from "./Clock";
+import ClockJapan from "./components/ClockJapan";
 
 function App() {
   return (
     <div className="App">
-      <Clock />
+      <ClockJapan />
     </div>
   );
 }
