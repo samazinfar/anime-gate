@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=ZCOOL+KuaiLe&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navBar {
+  position: fixed;
+  background-color: #0096ff;
+  width: 80vw;
+  max-width: 1300px;
+  height: 5rem;
+  border-radius: 0px 0px 5px 5px;
+  display: flex;
+  align-items: center;
+}
+
+.noUnderline {
+  text-decoration: none;
+}
+
+.logo {
+  margin-left: 2em;
+  width: 15%;
+  min-width: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.logoName {
+  font-family: "ZCOOL KuaiLe", "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navigation {
+  margin-left: 1rem;
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navigationElement:hover {
+  cursor: pointer;
+}
+
+.navigationText {
+  margin-left: 0.5em;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.1em;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+.separator {
+  margin-left: 1.5em;
+  height: 100%;
+  border: 1px solid #003459;
+}
+
+.navigationElement {
+  margin-left: 1.5em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.positionSearchBar {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.searchBar {
+  margin-right: 30%;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  background-color: #003459;
+  border-radius: 30px;
+  padding: 0.7rem;
+}
+
+.input {
+  border: none;
+  background-color: #003459;
+  outline: none;
+  padding: 0;
+  color: white;
+  transition: 0.4s;
+  width: 0px;
+}
+
+.searchBar:hover {
+  background-color: #003459;
+}
+
+.searchBar:hover > .input,
+.input:focus {
+  background-color: #003459;
+  width: 7rem;
+  margin: 0px 0.5rem;
+}
+
+.searchButton {
+  cursor: pointer;
+  background-color: #003459;
+  border: none;
+  outline: none;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1170px) {
+  .navigationText {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .navigationElement:hover .navigationText,
+  .navigationElement:hover .svg {
+    cursor: pointer;
+    color: #003459;
+    fill: #003459;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .navigationElement:active .svg {
+    fill: #003459;
+  }
+  .navBar {
+    width: 100%;
+    border-radius: 0px;
+  }
+  .input {
+    width: 7rem;
+    margin: 0px 0.5rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .separator {
+    display: none;
+  }
+  .searchBar {
+    display: none;
+  }
+  .navigation {
+    justify-content: space-evenly;
+  }
+  .logo svg {
+    width: 60px;
+    height: 60px;
+  }
+  .logoName {
+    font-size: 0.9rem;
+  }
+  .wrapperInputResponsive {
+    margin-top: 5rem;
+    width: 100%;
+    height: 3rem;
+    background-color: #003459;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .responsiveInput {
+    color: #ffffff;
+    border: none;
+    width: 80%;
+    background-color: #003459;
+    outline: none;
+  }
+  .responsiveInputButton {
+    font-family: "Roboto", sans-serif;
+    background-color: #003459;
+    color: #0096ff;
+    border: none;
+    outline: none;
+  }
+  .responsiveInputButton:active {
+    color: white;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .wrapperInputResponsive {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .logo {
+    margin-left: 1em;
+  }
+}
