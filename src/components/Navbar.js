@@ -1,5 +1,5 @@
 // /* eslint-disable */ Disable eslint if needed
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Switch, Link } from "react-router-dom";
 
 // Components
@@ -18,6 +18,25 @@ import { ReactComponent as AboutIcon } from "./images/person-fill.svg";
 import { ReactComponent as SearchIcon } from "./images/search-svgrepo-com-2.svg";
 
 export default function Navbar() {
+  const [inputValue, setInputValue] = useState("");
+  const [callApi, setCallApi] = useState("");
+  const [apiResponse, setApiResponse] = useState([]);
+
+  useEffect(() => {
+    fetch(`https://api.jikan.moe/v3/search/anime?q=${callApi}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setApiResponse(data.results);
+      });
+  }, [callApi]);
+
+  const handelKeyDown = (e) => {
+    if (e.key === "Enter") {
+      setCallApi(inputValue);
+      setInputValue("");
+    }
+  };
+
   return (
     <section className="main">
       <section className="navBar">
@@ -53,7 +72,13 @@ export default function Navbar() {
         </div>
         <div className="positionSearchBar">
           <div className="searchBar">
-            <input className="input" placeholder="Search an anime" />
+            <input
+              className="input"
+              placeholder="Search an anime"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              onKeyDown={handelKeyDown}
+            />
             <button className="searchButton">
               <SearchIcon />
             </button>
@@ -61,9 +86,23 @@ export default function Navbar() {
         </div>
       </section>
       <section className="wrapperInputResponsive">
-        <input className="responsiveInput" placeholder="Search an anime" />
+        <input
+          className="responsiveInput"
+          placeholder="Search an anime"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          onKeyDown={handelKeyDown}
+        />
         <button className="responsiveInputButton">Go</button>
       </section>
+      {apiResponse === undefined
+        ? null
+        : apiResponse.map((anime) => (
+            <div>
+              <img src={anime.image_url} />
+              <p>{anime.title}</p>
+            </div>
+          ))}
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/my-list" component={MyList} />
