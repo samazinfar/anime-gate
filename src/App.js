@@ -1,13 +1,10 @@
-import React from "react";
 import "./App.css";
-import ClockJapan from "./components/ClockJapan";
+import Navbar from "./components/Navbar";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <ClockJapan />
+      <Navbar />
     </div>
   );
 }
-
-export default App;
