@@ -1,40 +1,36 @@
 import React from "react";
+import "./Footer.css";
 
 export default function Footer() {
   return (
-    <div className="App">
-      <div className="main-footer">
-        <div className="container">
-          <div className="row">
-            <div className="col">
-              <h4>Anime Gate</h4>
-              <ul className="list-unstyled">
-                <li>page principale anime gate</li>
-              </ul>
-            </div>
-            <div className="col">
-              <h4>Categorie</h4>
-              <ul className="list-unstyled">
-                <li>Sortie</li>
-                <li>Année</li>
-                <li>Genre</li>
-              </ul>
-            </div>
-            <div className="col">
-              <h4>About</h4>
-              <ul className="list-unstyled">
-                <li>Fondateurs</li>
-                <li>API</li>
-              </ul>
-            </div>
-          </div>
-          <div className="row">
-            <p className="col-small">
-              &copy;{new Date().getFullYear()} ANIME GATE INC | All right
-              reserved | Terms Of Service | Privacy
-            </p>
-          </div>
-        </div>
+    <div className="footer-main">
+      <div className="container">
+        <ul className="list-unstyled">
+          <li>AnimeGate.com</li>
+          <li>AnimeChat</li>
+          <li>Donation</li>
+        </ul>
+      </div>
+      <div className="row">
+        <ul className="list-unstyled">
+          <li>Sorties</li>
+          <li>Populaires</li>
+          <li>Année</li>
+        </ul>
+      </div>
+      <div className="column">
+        <ul className="list-unstyled">
+          <li>Apps</li>
+          <li>Recommendation</li>
+          <li>API</li>
+        </ul>
+      </div>
+      <div className="small">
+        <ul className="list-unstyled">
+          <li>Fondateurs</li>
+          <li>Github</li>
+          <li>Discord</li>
+        </ul>
       </div>
     </div>
   );

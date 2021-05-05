@@ -2,3 +2,16 @@
   background-image: url("./components//images/y-so-serious-white.png");
   height: 150vh;
 }
+.footer-main {
+  background-color: #0096ff;
+  color: antiquewhite;
+  padding-top: 3em;
+  bottom: 0;
+  width: 80vw;
+  max-width: 1300px;
+  height: 5rem;
+  border-radius: 0px 0px 5px 5px;
+  display: flex;
+  align-items: center;
+  flex-wrap: column;
+}
