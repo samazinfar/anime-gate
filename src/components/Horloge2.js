@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 export default function ClockJapan() {
   const [date, setDate] = useState(new Date());
-
   useEffect(() => {
     const timer = setInterval(() => setDate(new Date()), 1000);
     return function cleanup() {
