@@ -1,4 +1,4 @@
-import "./Margin.css";
+import "./About.css";
 
 export default function Discover() {
   return <h2 className="top">Discover</h2>;
