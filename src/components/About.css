@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
 .bodyAbout {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  font-family: 'Overpass', sans-serif
 }
 .top {
   justify-content: center;
   text-align: center;
   margin-top: 150px;
   color: #003459;
+  font-family: 'Overpass', sans-serif
 }
 .treePoeple {
   display: flex;
@@ -40,10 +44,12 @@
 }
 .underUserText {
   color: white;
+  font-family: 'Overpass', sans-serif
 }
 .paragraphe {
   margin-top: 30px;
   margin-left: 20px;
+  font-family: 'Overpass', sans-serif
 }
 .logoUnder {
   width: 60px;
@@ -56,6 +62,7 @@
   display: flex;
   justify-content: center;
   color: #003459;
+  font-family: 'Overpass', sans-serif
 }
 .underMainBox {
   display: flex;
@@ -77,6 +84,7 @@
   color: white;
   font-size: 30px;
   margin-left: 45px;
+  font-family: 'Overpass', sans-serif
 }
 .prenom{
   margin-top: 30px;
