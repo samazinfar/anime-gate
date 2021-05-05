@@ -1,0 +1,10 @@
+.main-footer {
+  position: fixed;
+  background-color: #0096ff;
+  width: 80vw;
+  max-width: 1300px;
+  height: 5rem;
+  border-radius: 0px 0px 5px 5px;
+  display: flex;
+  align-items: center;
+}

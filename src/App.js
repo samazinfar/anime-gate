@@ -1,12 +1,13 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Navbar />
+      <Horloge2 />
+      <Footer />
     </div>
   );
 }
-
-export default App;
