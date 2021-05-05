@@ -7,6 +7,7 @@ import Home from "./Home";
 import MyList from "./MyList";
 import News from "./News";
 import Discover from "./Discover";
+import About from "./About";
 
 // Icons
 import "./Navbar.css";
@@ -69,6 +70,7 @@ export default function Navbar() {
         <Route exact path="/my-list" component={MyList} />
         <Route exact path="/news" component={News} />
         <Route exact path="/discover" component={Discover} />
+        <Route exact path="/about" component={About} />
       </Switch>
     </section>
   );

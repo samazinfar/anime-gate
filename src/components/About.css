@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
+.bodyAbout {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Overpass', sans-serif
+}
+.top {
+  justify-content: center;
+  text-align: center;
+  margin-top: 150px;
+  color: #003459;
+  font-family: 'Overpass', sans-serif
+}
+.treePoeple {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.boxUser {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.imageUser {
+  display: flex;
+  width: 230px;
+  height: 230px;
+  padding-top: 50px;
+}
+.underUser {
+  display: flex;
+  background: #003459;
+  width: 230px;
+  height: 200px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.underUserText {
+  color: white;
+  font-family: 'Overpass', sans-serif
+}
+.paragraphe {
+  margin-top: 30px;
+  margin-left: 20px;
+  font-family: 'Overpass', sans-serif
+}
+.logoUnder {
+  width: 60px;
+  height: 60px;
+  color: white;
+  margin-top: 30px;
+  padding: 10px;
+}
+.sectionTitle {
+  display: flex;
+  justify-content: center;
+  color: #003459;
+  font-family: 'Overpass', sans-serif
+}
+.underMainBox {
+  display: flex;
+  justify-content: center;
+}
+.AboutBoxApi {
+  width: 400px;
+  height: 150px;
+  background-color: #003459;
+  display: flex;
+  align-items: center;
+}
+.jikanLogo{
+  width: 70px;
+  height: 70px;
+  margin-left: 30px;
+}
+.textBoxApi{
+  color: white;
+  font-size: 30px;
+  margin-left: 45px;
+  font-family: 'Overpass', sans-serif
+}
+.prenom{
+  margin-top: 30px;
+}
