@@ -44,7 +44,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <h1>Creators</h1>
+      <h1>API</h1>
       <div className="api">
         <div className="api_logo"></div>
         <a href="https://jikan.moe/" target="_blank">
