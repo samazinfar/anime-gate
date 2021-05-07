@@ -1,5 +1,5 @@
 import { Switch, Route } from "react-router-dom";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/Navbar";
 import Home from "./components/Home";
 import ResponsiveNavBar from "./components/ResponsiveNavBar";
 import AnimeDetails from "./components/AnimeDetails";
