@@ -14,11 +14,11 @@ function App() {
     <div className="App">
       <NavBar />
       <Switch>
-        <Route exact path="/" component={Home} />
         <Route exact path="/anime/:id" component={AnimeDetails} />
         <Route exact path="/about" component={About} />
         <Route exact path="/browse" component={Browse} />
         <Route exact path="/list" component={MyList} />
+        <Route path="/" component={Home} />
       </Switch>
       <ResponsiveNavBar />
       <Footer />
