@@ -2,6 +2,7 @@
   position: relative;
   right: 150px;
   top: 1500px;
+  padding: 17px;
   align-items: center;
   background-color: #0096ff;
   width: 80vw;
@@ -12,7 +13,7 @@
   flex-direction: column;
 }
 
-/*.container {
+.container {
   margin-left: 0.5em;
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -20,6 +21,9 @@
   font-size: 1.1em;
   line-height: 29px;
   color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 .row {
   margin-left: 0.5em;
@@ -29,6 +33,9 @@
   font-size: 1.1em;
   line-height: 29px;
   color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 .column {
   margin-left: 0.5em;
@@ -38,6 +45,9 @@
   font-size: 1.1em;
   line-height: 29px;
   color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 .small {
   margin-left: 0.5em;
@@ -47,5 +57,7 @@
   font-size: 1.1em;
   line-height: 29px;
   color: #ffffff;
-}*/
-
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
