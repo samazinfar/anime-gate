@@ -3,34 +3,36 @@ import "./Footer.css";
 
 export default function Footer() {
   return (
-    <div className="footer-main">
-      <div className="container">
-        <ul className="list-unstyled">
-          <li>AnimeGate.com</li>
-          <li>AnimeChat</li>
-          <li>Donation</li>
-        </ul>
-      </div>
-      <div className="row">
-        <ul className="list-unstyled">
-          <li>Sorties</li>
-          <li>Populaires</li>
-          <li>Année</li>
-        </ul>
-      </div>
-      <div className="column">
-        <ul className="list-unstyled">
-          <li>Apps</li>
-          <li>Recommendation</li>
-          <li>API</li>
-        </ul>
-      </div>
-      <div className="small">
-        <ul className="list-unstyled">
-          <li>Fondateurs</li>
-          <li>Github</li>
-          <li>Discord</li>
-        </ul>
+    <div class="relative">
+      <div className="footer-main">
+        <div className="container">
+          <div className="list-unstyled">
+            <p className="navigationText">AnimeGate.com</p>
+            <p className="navigationText">AnimeChat</p>
+            <p className="navigationText">Donation</p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="list-unstyled">
+            <p className="navigationText">Sorties</p>
+            <p className="navigationText">Populaires</p>
+            <p className="navigationText">Année</p>
+          </div>
+        </div>
+        <div className="column">
+          <div className="list-unstyled">
+            <p className="navigationText">Apps</p>
+            <p className="navigationText">Recommendation</p>
+            <p className="navigationText">API</p>
+          </div>
+        </div>
+        <div className="small">
+          <div className="list-unstyled">
+            <p className="navigationText">Fondateurs</p>
+            <p className="navigationText">Github</p>
+            <p className="navigationText">Discord</p>
+          </div>
+        </div>
       </div>
     </div>
   );
