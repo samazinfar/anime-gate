@@ -1,75 +1,32 @@
-// /* eslint-disable */ Disable eslint if needed
-import React from "react";
-import { Route, Switch, Link } from "react-router-dom";
-
-// Components
-import Home from "./Home";
-import MyList from "./MyList";
-import News from "./News";
-import Discover from "./Discover";
-
-// Icons
-import "./Navbar.css";
+import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "./images/Logo.svg";
-import { ReactComponent as ListIcon } from "./images/list.svg";
-import { ReactComponent as NewsIcon } from "./images/flame-svgrepo-com.svg";
-import { ReactComponent as DiscoverIcon } from "./images/shuriken-svgrepo-com-3.svg";
-import { ReactComponent as AboutIcon } from "./images/person-fill.svg";
-import { ReactComponent as SearchIcon } from "./images/search-svgrepo-com-2.svg";
+import { ReactComponent as LogoSmall } from "./images/LogoSmall.svg";
+import "./styles/NavBar.css";
 
-export default function Navbar() {
+export default function NavBar() {
   return (
-    <section className="main">
-      <section className="navBar">
-        <Link to="/" className="logo noUnderline">
-          <div>
-            <Logo />
-          </div>
-          <p className="logoName">
-            ANIME <br />
-            GATE
-          </p>
+    <div className="navigation_Main">
+      <Link className="big_logo" style={{ cursor: "pointer" }} to="/">
+        <Logo />
+      </Link>
+      <Link className="small_logo" to="/">
+        <LogoSmall />
+      </Link>
+      <div className="navigation_links">
+        <Link className="navBar_Link" to="/list">
+          <p>Watch List</p>
         </Link>
-        <div className="navigation">
-          <Link to="/my-list" className="navigationElement noUnderline">
-            <ListIcon />
-            <p className="navigationText">My List</p>
-            <hr className="separator" />
-          </Link>
-          <Link to="/news" className="navigationElement noUnderline">
-            <NewsIcon />
-            <p className="navigationText">News</p>
-            <hr className="separator" />
-          </Link>
-          <Link to="/discover" className="navigationElement noUnderline">
-            <DiscoverIcon />
-            <p className="navigationText">Discover</p>
-            <hr className="separator" />
-          </Link>
-          <Link to="/about" className="navigationElement noUnderline">
-            <AboutIcon />
-            <p className="navigationText">About</p>
-          </Link>
-        </div>
-        <div className="positionSearchBar">
-          <div className="searchBar">
-            <input className="input" placeholder="Search an anime" />
-            <button className="searchButton">
-              <SearchIcon />
-            </button>
-          </div>
-        </div>
-      </section>
-      <section className="wrapperInputResponsive">
-        <input className="responsiveInput" placeholder="Search an anime" />
-        <button className="responsiveInputButton">Go</button>
-      </section>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/my-list" component={MyList} />
-        <Route exact path="/news" component={News} />
-        <Route exact path="/discover" component={Discover} />
-      </Switch>
-    </section>
+        <Link className="navBar_Link" to="/browse">
+          <p>Browse</p>
+        </Link>
+        <Link className="navBar_Link" to="/about">
+          <p>About</p>
+        </Link>
+      </div>
+      <div className="login_nav">
+        <p>Log In</p>
+        <button>Sign Up</button>
+      </div>
+    </div>
   );
 }

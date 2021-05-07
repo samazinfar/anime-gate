@@ -1,10 +1,29 @@
+import { Switch, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import Home from "./components/Home";
+import ResponsiveNavBar from "./components/ResponsiveNavBar";
+import AnimeDetails from "./components/AnimeDetails";
+import About from "./components/About";
+import MyList from "./components/MyList";
+import Browse from "./components/Browse";
+import Footer from "./components/Footer";
 import "./App.css";
-import Navbar from "./components/Navbar";
 
-export default function App() {
+function App() {
   return (
     <div className="App">
-      <Navbar />
+      <NavBar />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/anime/:id" component={AnimeDetails} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/browse" component={Browse} />
+        <Route exact path="/list" component={MyList} />
+      </Switch>
+      <ResponsiveNavBar />
+      <Footer />
     </div>
   );
 }
+
+export default App;
