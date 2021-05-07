@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/anime-gate/static/css/main.8620e3bc.chunk.css",
-    "main.js": "/anime-gate/static/js/main.d403c7c2.chunk.js",
-    "main.js.map": "/anime-gate/static/js/main.d403c7c2.chunk.js.map",
+    "main.js": "/anime-gate/static/js/main.b772fc65.chunk.js",
+    "main.js.map": "/anime-gate/static/js/main.b772fc65.chunk.js.map",
     "runtime-main.js": "/anime-gate/static/js/runtime-main.b9cd8934.js",
     "runtime-main.js.map": "/anime-gate/static/js/runtime-main.b9cd8934.js.map",
     "static/css/2.c6fa5b8a.chunk.css": "/anime-gate/static/css/2.c6fa5b8a.chunk.css",
@@ -37,6 +37,6 @@
     "static/css/2.c6fa5b8a.chunk.css",
     "static/js/2.5ffdd3ec.chunk.js",
     "static/css/main.8620e3bc.chunk.css",
-    "static/js/main.d403c7c2.chunk.js"
+    "static/js/main.b772fc65.chunk.js"
   ]
 }
